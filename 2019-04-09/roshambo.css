@@ -1,0 +1,22 @@
+#h1 {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+#buttons{
+    display: block;
+    margin: auto;
+    text-align: center
+}
+
+#playgame, #reset {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+
+#output1, #output2, #output3, #output4 {
+    display: block;
+    margin: auto;
+    text-align: center;
+}

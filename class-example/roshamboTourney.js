@@ -20,13 +20,17 @@ let pScore1 = 0
 let pScore2 = 0
 
 let player1 = {name:'Izzy', hand:''};
-let player2 = {name:'Ben', hand:''};
-let player3 = {name:'Taylor', hand:''};
+let player2 = {name:'Taylor', hand:''};
+let player3 = {name:'Ben', hand:''};
 let player4 = {name:'Torrie', hand:''};
 
+
+
+
+
 function playRound (rPlayer1,rPlayer2) {
-    rPlayer1.hand = getHand() //Choose Rock, Paper, or Scissors for rPlayer1
-    rPlayer2.hand = getHand() //Choose Rock, Paper, or Scissors for rPlayer2
+    rPlayer1.hand = getHand () //Choose Rock, Paper, or Scissors for rPlayer1
+    rPlayer2.hand = getHand () //Choose Rock, Paper, or Scissors for rPlayer2
     console.log (rPlayer1.name + " plays " + rPlayer1.hand + " & " + rPlayer2.name + " plays " + rPlayer2.hand);
     //Begin Winner Declaration
     if (rPlayer1.hand === "Rock" && rPlayer2.hand === "Scissors" || rPlayer1.hand === "Scissors" && rPlayer2.hand === "Paper" || rPlayer1.hand === "Paper" && rPlayer2.hand === "Rock"){ 
@@ -41,8 +45,8 @@ function playRound (rPlayer1,rPlayer2) {
 }   //End playRound function
 
 function playGame (gPlayer1,gPlayer2,playUntil) {
-    while (pScore1<playUntil && pScore2<playUntil){ //While plays roshambo untill a player's score is playUntil 
-        playRound(gPlayer1,gPlayer2);
+    while (pScore1 < playUntil && pScore2 < playUntil) { //While plays roshambo untill a player's score is playUntil 
+        playRound (gPlayer1,gPlayer2);
     }
     console.log (pScore1 + " to " + pScore2)   
     if (pScore1 == playUntil) { //Determines and returns winner of the game.
@@ -63,4 +67,9 @@ function playTournament (tPlayer1,tPlayer2,tPlayer3,tPlayer4,tWinScore) {
     console.log (tWinner.name + " Wins it all!") 
 }   //End playTournament Function
 
-playTournament(player1,player2,player3,player4,5)
+
+
+    playTournament(player1,player2,player3,player4,5)
+
+
+
