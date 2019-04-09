@@ -38,7 +38,7 @@ slideshow.play()
 /*
 Going back to our slideshow object, let's add some functionality.
 create an empty property named playInterval
-A play() function that moves to the next photo ever 2000ms until the end.
+A play() function that moves to the next photo every 2000ms until the end.
 Tip - use playInterval = setInterval(fn,ms).
 A pause() function that stops the slideshow 
 Tip - use clearInterval(playInterval)
