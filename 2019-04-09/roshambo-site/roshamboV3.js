@@ -1,13 +1,13 @@
 const hands = ['Rock','Paper','Scissors']
-function getHand() {return hands[parseInt(Math.random()*10)%3]}
+function getHand() {return hands [parseInt(Math.random()*10)%3]}
 
 let pScore1 = 0
 let pScore2 = 0
 let tWins = 0
 let tLosses = 0
 
-let player1 = {name:'', hand:''};
-let player2 = {name:'SkyNet', hand:''};
+let player1 = {name:'', hand:''}
+let player2 = {name:'SkyNet', hand:''}
 
 function clearScore () {
     pScore1 = 0
@@ -42,13 +42,15 @@ function playRound (rPlayer1,rPlayer2) {
     document.getElementById("output4").innerHTML = "Wins: " + tWins + "   Losses: " + tLosses   
 }   //End playRound function
 
-player1.name = prompt("What is your name?")
-document.getElementById("playerName").innerHTML = player1.name
-
 function playRPS () {
-    player1.hand = prompt("Rock, Paper, or Scissors?")
+    player1.hand = prompt("Rock, Paper, or Scissors?") //Player Chooses Rock, Paper, or Scissors
     playRound(player1,player2)
 }
 
-document.getElementById("playgame").addEventListener ("click",function(){playRPS()})
-document.getElementById("reset").addEventListener ("click", function(){clearScore()}) 
+player1.name = prompt("What is your name?")
+document.getElementById("playerName").innerHTML = player1.name
+
+document.getElementById("playgame") //Play Game Button
+    .addEventListener ("click",function(){playRPS()})
+document.getElementById("reset") //Reset Score Button 
+    .addEventListener ("click", function(){clearScore()}) 
