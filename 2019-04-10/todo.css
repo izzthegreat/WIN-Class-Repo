@@ -1,0 +1,27 @@
+body{
+    font-family: 'Comic Sans MS';
+    color: white;
+    background-color: black;
+}
+
+#list{
+    display: inline-block;
+    margin: auto;
+    text-align: left;
+    width: 100px;
+}
+
+#addItem{
+    display: block;
+    margin: auto;
+}
+
+div{
+    text-align: center;
+}
+
+h1{
+    display: block;
+    margin: auto;
+    text-decoration: underline;
+}
