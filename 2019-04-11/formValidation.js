@@ -28,18 +28,25 @@
 
 
 $(document).ready(function(){
-    function formSubmit() {
-        let name = $('name')
-        let eMail = $('email')
-        let phoneNum = $('phone')
-        let message = $('message')
-        let required = [name,eMail,phoneNum]
+    $('#submit').on('click', function() {
+        const name = $('#name')
+        const eMail = $('#email')
+        const phoneNum = $('#phone')
+        const message = $('#message')
+
+        const required = [name,eMail,phoneNum]
+
         for (let i=0; i<required.length; i++){
             if (required[i].val() === ''){
-                message.find('p').text("Please Fill Out Required Fields").addClass('warning')
-                required.prev()[i].addClass('warning')
+                $(message).text("Please Fill Out Required Fields").addClass('warning')
+                required[i].prev().addClass('warning')
+            } else {
+                required[i].prev().removeClass()
             }
         }
-    }
-    $('submit').click(formSubmit())
+        if (!$("#form label").hasClass('warning')) {
+            $("#form")[0].remove();
+            $("#pre-form h2").text("Thanks for your feedback!")
+        }
+    })
 })
