@@ -27,26 +27,30 @@
 // - test it out!
 
 
-$(document).ready(function(){
-    $('#submit').on('click', function() {
-        const name = $('#name')
+$(document).ready(function(){ // Wait for the DOM
+    $('#submit').on('click', function() { //Wait for the Submit button click
+        // Save all of the input to variables
+        const name = $('#name') 
         const eMail = $('#email')
         const phoneNum = $('#phone')
         const message = $('#message')
 
+        // Store inputs in an array
         const required = [name,eMail,phoneNum]
 
-        for (let i=0; i<required.length; i++){
-            if (required[i].val() === ''){
+        for (let i=0; i<required.length; i++){ // Iterate through the array to...
+            if (required[i].val() === ''){ // ...Check that each field has input
+
+                // If not, chastize user...
                 $(message).text("Please Fill Out Required Fields").addClass('warning')
-                required[i].prev().addClass('warning')
+                required[i].prev().addClass('warning') // ...And identify empty fields
             } else {
-                required[i].prev().removeClass()
+                required[i].prev().removeClass() // If it is filled, unflagg the field
             }
         }
-        if (!$("#form label").hasClass('warning')) {
-            $("#form")[0].remove();
-            $("#pre-form h2").text("Thanks for your feedback!")
+        if (!$("#form label").hasClass('warning')) { // Once all fields are validated...
+            $("#form")[0].remove(); // Remove the form...
+            $("#pre-form h2").text("Thanks for your feedback!") // ...And say "thank you"
         }
     })
 })
