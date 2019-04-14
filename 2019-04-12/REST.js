@@ -27,15 +27,15 @@ $('#getPosts').click(function(){
 })
 
 $('#get10').click(function(){
-    $.get('http://jsonplaceholder.typicode.com/posts/10', post10 => {
+    $.get('http://jsonplaceholder.typicode.com/posts/10', post10 => 
         $('#whereStuffGoes').html('<h3>' + post10.title + '<br>by User ' + post10.userId + '</h3><p>' + post10.body + '</p><br>')
-    })
+    )
 })
 
 $('#getComments12').click(function(){
     $.get('https://jsonplaceholder.typicode.com/comments/?postId=12', input => 
         $('#whereStuffGoes').html(input.map(function(comment){
-            return '<p>Name: ' + comment.name + '</p><p>Email: '+ comment.email + '</p><p>'+ comment.body + '</p>'
+            return '<p>Name: ' + comment.name + '<br>Email: '+ comment.email + '</p><p>'+ comment.body + '</p>'
         })))
 })
 
@@ -46,14 +46,16 @@ $('#getUser2Posts').click(function(){
         })))
 })
 
-$('#createPost').click(function(){
-    $.ajax({
-        method: 'POST',
-        url: 'https://jsonplaceholder.typicode.com/posts',
-        data: {
-            title: 'My New post',
-            body: 'This is my post. There are many like it but this one is mine.'
-        }
-    })
-    $.get('https://jsonplaceholder.typicode.com/posts', input => console.log(input))
+$('#createPost').click(function(){    
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: 'My New Post',
+      body: 'This is my post. There are many like it but this one is mine.',
+      userId: '27'
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  }).then(response => response.json()).then(json => $('#whereStuffGoes').html('<h3>Post ID: '+ json.id +'<br><br>' + json.title + '<br>by User ' + json.userId + '</h3><p>' + json.body + '</p><br>'))
 })
