@@ -43,7 +43,8 @@ function playRound (rPlayer1,rPlayer2) {
 }   //End playRound function
 
 function playRPS () {
-    player1.hand = prompt("Rock, Paper, or Scissors?") //Player Chooses Rock, Paper, or Scissors
+    let checkHand = prompt("Rock, Paper, or Scissors?") //Player Chooses Rock, Paper, or Scissors
+    player1.hand = checkHand.charAt(0).toUpperCase() + checkHand.slice(1,checkHand.length)
     playRound(player1,player2)
 }
 
