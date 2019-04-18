@@ -1,6 +1,8 @@
-```javascript
+# ES6 Notes
 
-//Template Literal
+
+### Template Literal
+```javascript
 console.log(`Hello! I'm a string
     continues on the next line `)
 
@@ -14,8 +16,12 @@ const instructor = {
         return `Hello ${this.name}, ${this.lesson} is ${day}.`
     }
 }
+```
 
-//Interpolation
+### Interpolation
+
+
+```JavaScript
 console.log(`Hello ${name} hope ${day} goes well!`)
 console.log(`Hello ${instructor.name}, ${instructor.lesson} is ${day}.`)
 console.log(instructor.greet())
@@ -30,30 +36,49 @@ function foo () {
 }
 
 foo()
-
-//const can only be assigned once
+```
+`const` can only be assigned once  
+```JavaScript
 const instructors = [`Jimm`,`Chris`]
 
-//instructors = [`James`, `Christopher`]
-//TypeError: Assignment to constant variable
+instructors = [`James`, `Christopher`]
+```
+> TypeError: Assignment to constant variable
 
-//Const CAN change though
+Const CAN change though
+
+```JavaScript
 instructors.push(`Jack`,`Jill`)
 console.log(instructors)
+```
 
-//Const also accepts capitalized declarations
+Const also accepts capitalized declarations
+
+```JavaScript
 const Capital = `Raleigh`
+```
+### Default Parameters
 
-//Default Parameters
+```JavaScript
 function hello(name = `Mystery Person`) {
     console.log(`Hello ${name}, it's me.
     I was wondering if after all these years you'd like to meet?`)
 }
 
 hello(`Bobby`)
-hello()
+```
+> Hello Bobby, it's me.  
+> I was wondering if after all these years you'd like to meet?
 
-//Arrow Functions
+```JavaScript
+hello()
+```
+> Hello Mystery Person, it's me.
+> I was wondering if after all these years you'd like to meet?
+
+
+### Arrow Functions
+```JavaScript
 const teacher = {
     name: `Jimm`,
     speak: function () {
