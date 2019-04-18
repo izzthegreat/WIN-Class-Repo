@@ -5,7 +5,11 @@
 ```javascript
 console.log(`Hello! I'm a string
     continues on the next line `)
+```
+> Hello! I'm a string
+>   continues on the next line
 
+```javascript
 const name = 'Bryant'
 const day = 'Wednesday'
 
@@ -25,8 +29,10 @@ const instructor = {
 console.log(`Hello ${name} hope ${day} goes well!`)
 console.log(`Hello ${instructor.name}, ${instructor.lesson} is ${day}.`)
 console.log(instructor.greet())
+```
+Hoisting - `var` always hoists itself
 
-//Hoisting - var always hoists itself
+```javascript
 function foo () {
     let x = true
     if (x) {
@@ -85,9 +91,9 @@ const teacher = {
         //bind a function to a specific context
         let boundFunction = function (){
             console.log (`Later, my name is ${this.name}`)
-        }.bind(this) //Bind `this` to the
+        }.bind(this) //Bind `this` to the scope of the object
         
-    //bound Function will always run in bound context
+    //A bound Function will always run in bound context.
     setTimeout(boundFunction,1000)
     }
 }
@@ -104,10 +110,11 @@ const teacher2 = {
     setTimeout(boundFunction,1000)
     }
 }
+```
+Arrow Functions bind lexically  
+Lexical Binding binds to the scope of the definition, not the call 
 
-// Arrow Functions bind lexically
-// Lexical Binding binds to the scope of the definition, not the call 
-
+```javascript
 let students = [
     {name: `Hugo`},
     {name: `Candace`},
@@ -117,9 +124,13 @@ let students = [
 
 let names = students.map(student => student.name)
 console.log(names)
+```
 
+### `...` Rest Parameter
 
-//Rest parameter = Takes in all arguments as an array
+Takes in all arguments as an array
+
+```javascript
 function add (...numbers) {
     console.log(`rest parameters:`, numbers)
     var sum = 0
@@ -130,8 +141,10 @@ function add (...numbers) {
 }
 
 console.log(add(1,2,3,4,5,6,7,8))
+```
+Rest example on one line
 
-//Rest example on one line
+```javascript
 let addition = (...numbers) => numbers.reduce((sum,number) => sum += number, 0) 
 
 console.log(addition(1,2,3,4,5,6,7,8))
@@ -141,14 +154,19 @@ function addStuff(x,y,...z){
 }
 
 console.log(addStuff(1, 2, `hello`, `world`, true, 99))
+```
+### Spread Operator
 
-//Spread Operator
+```javascript
 let random = [`hello`, `world`, true, 99]
 let newArray = [1, 2, ...random, 3]
 
 console.log(newArray)
+```
 
-//Array Destructors
+### Array Destructors
+
+```javascript
 var moreStudents = [`Julian`, `AJ`, `Matt`]
 var x = moreStudents[0]
 var y = moreStudents[1]
@@ -172,9 +190,10 @@ let completedHomework = () => {
 let [one, two, three] = completedHomework()
 
 console.log (one, two, three)
+```
+Also Works with objects
 
-//Also Works with objects
-
+```javascript
 let inspector = {
     name: `Clouseau`,
     email:`pink@panther.com`
@@ -183,8 +202,11 @@ let inspector = {
 let {name: who, email: to} = inspector
 
 console.log (who)
+```
 
-//Prototypes/Classes
+### Prototypes/Classes
+
+```javascript
 //ES5 Way
 function Dude (name, job) {
     this.name = name
