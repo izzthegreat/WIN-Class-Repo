@@ -1,0 +1,1 @@
+document.getElementById('root').innerHTML = "<h1>Hey, everybody!</h1>"
