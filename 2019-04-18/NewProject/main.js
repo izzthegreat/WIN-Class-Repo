@@ -31,8 +31,8 @@ const RGB = getRgb()
 const result = Network.run({r: 0, g: 0, b: 0})
 
 
-const example = document.querySelector('#example')
-const input = document.querySelector('#color')
+const example = document.getElementById("example")
+const input = document.getElementById("color")
 input.addEventListener(`change`, e => {
     example.style.backgroundColor = e.target.value
 })
