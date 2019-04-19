@@ -1,0 +1,13 @@
+.card-view {
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+.delete-button {
+    margin: 1rem 15px 0;
+}
+
+.edit-button {
+    margin: 1rem 15px 0;
+}
