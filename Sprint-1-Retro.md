@@ -3,7 +3,7 @@
 ## Team 5
 > **Bryant Allen**  
 > GQ Lewis  
-> Pavlo Ptuskin  
+> Pavlo Ptushkin  
 > Pravin Prasad
 
 Ths was a great opportunity for me to work on a team in a coding role. I believe I got a chance to both show my skills and get better at leaning on others for help.
