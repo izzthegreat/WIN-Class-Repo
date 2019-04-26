@@ -10,6 +10,6 @@ Ths was a great opportunity for me to work on a team in a coding role. I believe
 
 I do think I could get better at technical problem solving as I feel likeI spent a lot of time asking Jmmiy/Chris for help, as opposed to leaning on my teammates and/or troubleshooting/debugging myself.
 
-It was amazing, as always, to see the final output after working so hard to getthing working and overcoming hurdles.
+It was amazing, as always, to see the final output after working so hard to get the thing working and overcoming so many hurdles.
 
 Can't wait for my new team and the next sprint!
