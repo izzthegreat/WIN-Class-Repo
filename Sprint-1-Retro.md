@@ -12,4 +12,4 @@ I do think I could get better at technical problem solving as I feel likeI spent
 
 It was amazing, as always, to see the final output after working so hard to getthing working and overcoming hurdles.
 
-Can't wait for my new team and the next sprint.
+Can't wait for my new team and the next sprint!
